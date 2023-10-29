@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import Task from './task.js';
-import darkmode from './darkmone.js';
+import darkmode from './darkmode.js';
 function App() {
 
   const [tasks,settasks]=React.useState(JSON.parse(localStorage.getItem("tasks"))||[{
@@ -13,7 +13,9 @@ function App() {
   React.useEffect(()=>{
      localStorage.setItem("tasks",JSON.stringify(tasks))
   },[tasks])
-
+  React.useEffect(()=>{
+    darkmode();
+ },[])
   function btnclick(){
     settasks(prevtasks=>{
       const newId = prevtasks.length + 1;
@@ -42,8 +44,8 @@ function App() {
   return (
     <div className="firstdiv">
 
-      <div className="theme-container shadow-dark">
-          <img id="theme-icon" src="https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg" alt="ERR" />
+      <div className="theme-container shadow-light">
+          <img id="theme-icon" src="https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg" alt="ERR" />
       </div>
       <div className="title_icon">
           <h3>To-Do List</h3>

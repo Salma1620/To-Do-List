@@ -9,7 +9,6 @@ body{
   justify-content: center;
   top: 0;
   height: 100vh;
-  background-color: #222222;
 }
 .account{
   display: flex;
@@ -80,10 +79,10 @@ body{
   padding: 10px;
   border-radius: 50px ;
   width: 400px;
-  background-color:#222222 ;
+  background-color:#E4E4E4 ;
   border: none;
   border-right: 2px solid #59524d  ;
-  color: #E4E4E4;
+  color: #000000;
 }
 .input:focus{
   outline: none;
