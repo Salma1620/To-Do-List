@@ -1,0 +1,175 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: flex;
+  justify-content: center;
+  top: 0;
+  height: 100vh;
+  background-color: #222222;
+
+}
+.account{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 165px;
+}
+.sign{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-evenly;
+  
+}
+.in , .up{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+  color: #E4E4E4;
+  background-color: #f6d5d2;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  line-height: 90px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.in:hover , .up:hover{
+  color: #E4E4E4;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-top: 15px;
+  /* c:\Users\HP\Downloads\bootstrap-login-register-forms\form-2\assets c:\Users\HP\Downloads\bootstrap-login-register-forms\form-2\index.html */
+}
+.form input{
+  background-color: #045757;
+  height: 20px;
+}
+.firstdiv{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 20px;
+  background-color: #044343;
+  border-radius: 10px;
+  padding: 30px;
+  height: fit-content;
+  margin-top: 120px;
+}
+.title_icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  column-gap: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #E4E4E4;
+}
+.search_bar{
+  display: flex;
+  align-items: center;
+}
+.input{
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50px ;
+  width: 400px;
+  background-color:#222222 ;
+  border: none;
+  border-right: 2px solid #59524d  ;
+  color: #E4E4E4;
+}
+.input:focus{
+  outline: none;
+}
+.search_btn{
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius:50px ;
+  background-color:#056666 ;
+  color: #E4E4E4;
+  border: none;
+  position: absolute;
+  right: 0;
+  left: 810px;
+}
+.search_btn:hover{
+  background-color:#299999;
+  color: #E4E4E4;
+
+
+}
+.focus_search_btn{
+  color: #E4E4E4;
+  background-color:#056666;
+}
+
+ul li {
+  font-size: 25px;
+  color: #E4E4E4;
+  list-style: none;
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+ul li div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.p{
+  background-color:transparent ;
+  border: none;
+  font-size: 20px;
+}
+.done_btn{
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  background-color: #e48d85;
+  border: none;
+}
+.done_btn-focus{
+  background-color: #bb6559;
+}
+.close-element{
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border: none;
+}
+.button1 , .button2{
+  height: 35px;
+  width: 80px;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+}
+
+.button1:hover{
+  border: 1px solid #70322c;
+}
+.button2:hover{
+  border: 1px solid #ffdfdb;
+}
+.button1{
+  background-color: #f7bbb3;
+}
+.button2{
+  background-color: #562622;
+  color: #f6d5d2;
+}
+.p_none{
+  display: none;
+}
