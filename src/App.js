@@ -1,8 +1,11 @@
 import './App.css';
 import React from 'react';
 import Task from './task.js';
+import Addtask from './Addtask.js';
 import darkmode from './darkmode.js';
+
 function App() {
+  const inputref=React.useRef(null);
 
   const [tasks,settasks]=React.useState(JSON.parse(localStorage.getItem("tasks"))||[{
     id:"",
@@ -14,7 +17,7 @@ function App() {
      localStorage.setItem("tasks",JSON.stringify(tasks))
   },[tasks])
   React.useEffect(()=>{
-    darkmode();
+    darkmode(inputref.current);
  },[])
   function btnclick(){
     settasks(prevtasks=>{
@@ -24,6 +27,8 @@ function App() {
       setinput("");
       return newlist;
     })    
+    setadding(false);
+
   }
 
   function removetask(id){
@@ -37,7 +42,11 @@ function App() {
     setinput(tasktochange[0].onetask)
     removetask(id)
   }
-
+const [adding,setadding]=React.useState(false);
+  function Addclicked(){
+    setadding(true);
+    console.log(adding)
+  }
   const afficher=tasks.map(element=> element.onetask.length>0 && <Task task={element.onetask} key={element.id} id={element.id} fct={removetask} change={changetask}/>)
   console.log(tasks.length)
 
@@ -50,11 +59,11 @@ function App() {
       <div className="title_icon">
           <h3>To-Do List</h3>
       </div>
-      <div className="search_bar">
-              <input className="input" type="text" name="input" placeholder="Add your task"
-                      onChange={(e)=> setinput (e.target.value)} value={input}/>
-              <button className="search_btn" onClick={btnclick} >Add</button>
-      </div>
+      {adding===false ? <button className='adding_btn' onClick={Addclicked}>Click To Add A New Task</button> 
+      : <Addtask input={input} setinput={setinput} settasks={settasks} btncliked={btnclick} reference={inputref}/>
+      }
+
+      
         <ul>
           {afficher}
         </ul>
