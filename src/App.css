@@ -173,3 +173,7 @@ ul li div{
 .p_none{
   display: none;
 }
+.btnsdiv{
+  display: flex ;
+  column-gap: 0;
+}
