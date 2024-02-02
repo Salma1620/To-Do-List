@@ -1,17 +1,19 @@
 import React from 'react';
-import circulaire from './icons/circulaire.png';
-import supprimer from './icons/supprimer.png';
+import { AiFillEdit } from "react-icons/ai";
+import { MdDelete } from "react-icons/md";
 
 export default function Task(props){
-    
     return(
-            <li>
-                <p>{props.task}</p>
-                <div className='btnsdiv'>
-                <button className='close-element' onClick={()=>props.change(props.id)}><img src={circulaire}/></button>
-                <button className="close-element" onClick={()=>props.fct(props.id)}><img src={supprimer}/></button>
-                </div>
-            </li>
-            
+        <li>
+            <p className='ptask'>{props.task}</p>
+            <div className='btnsdiv'>
+            <button className='close-element' onClick={()=>props.edit(props.id)}>
+                <AiFillEdit size={25} style={{ color: 'black' }}/>
+            </button>
+            <button className="close-element" onClick={()=>props.fct(props.id)}>
+                <MdDelete size={25} style={{color:'#970C10'}}/>
+            </button>
+            </div>
+        </li>            
     );
 }

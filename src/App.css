@@ -1,8 +1,6 @@
 *{
   margin: 0;
   padding: 0;
-  overflow: hidden;
-
 }
 body{
   display: flex;
@@ -21,7 +19,6 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content:space-evenly;
-  
 }
 .in , .up{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -43,24 +40,42 @@ body{
   flex-direction: column;
   row-gap: 15px;
   margin-top: 15px;
-  /* c:\Users\HP\Downloads\bootstrap-login-register-forms\form-2\assets c:\Users\HP\Downloads\bootstrap-login-register-forms\form-2\index.html */
 }
 .form input{
-  background-color: #045757;
+  background-color: #145DA0;
   height: 20px;
 }
 .firstdiv{
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   text-align: center;
   row-gap: 20px;
-  background-color: #044343;
+  background-color: #eff8fff3;
   border-radius: 10px;
   padding: 30px;
   height: fit-content;
-  margin-top: 120px;
-  width: 465px;
+  margin-top: 150px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  max-width: 465px;
+}
+.quotediv{
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 20px;
+  padding:10px;
+  border-radius: 10px;
+  background-color: #f2f8fd;
+  min-height :50px;
+  max-width: 350px;
+  color: #1b1b1c;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 .title_icon{
   display: flex;
@@ -68,8 +83,20 @@ body{
   justify-content: center;
   font-size: 30px;
   column-gap: 30px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: #E4E4E4;
+  font-family: 'VotrePolice', sans-serif; 
+  color: #131a28; 
+  font-size: 2em; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: moveTitle 2s ;
+}
+@keyframes moveTitle {
+  0% {
+    transform: translateX(50px);
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
 }
 .search_bar{
   display: flex;
@@ -77,12 +104,15 @@ body{
 }
 .input{
   font-size: 20px;
-  padding: 10px;
-  border-radius: 50px ;
-  width: 400px;
+  padding: 9px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  max-width: 400px;
   background-color:#E4E4E4 ;
   border: none;
-  border-right: 2px solid #59524d  ;
+  border-top: 1px solid #59524d  ;
+  border-bottom: 1px solid #59524d  ;
+  border-left: 1px solid #59524d  ;
   color: #000000;
 }
 .input:focus{
@@ -91,36 +121,30 @@ body{
 .search_btn{
   font-size: 20px;
   padding: 10px 25px;
-  border-radius:50px ;
-  background-color:#056666 ;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: #055C9D;
   color: #E4E4E4;
   border: none;
-  position: absolute;
-  right: 0;
-  left: 810px;
+  cursor: pointer;
 }
 .search_btn:hover{
-  background-color:#299999;
+  background-color:#145DA0;
   color: #E4E4E4;
-
-
 }
 .focus_search_btn{
   color: #E4E4E4;
   background-color:#056666;
 }
-
 ul li {
   font-size: 25px;
-  color: #E4E4E4;
+  color: #000000;
   list-style: none;
   text-align: left;
   padding-left: 20px;
-  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  cursor: pointer;
 }
 ul li div{
   display: flex;
@@ -128,27 +152,20 @@ ul li div{
   justify-content: center;
   column-gap: 20px;
 }
-
 .p{
   background-color:transparent ;
   border: none;
   font-size: 20px;
 }
-.done_btn{
-  width: 20px;
-  height: 20px;
-  border-radius: 50px;
-  background-color: #e48d85;
-  border: none;
-}
-.done_btn-focus{
-  background-color: #bb6559;
+.ptask{
+  max-width: 340px;
 }
 .close-element{
   height: 50px;
   width: 50px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 .button1 , .button2{
   height: 35px;
@@ -156,20 +173,6 @@ ul li div{
   font-size: 17px;
   border: none;
   border-radius: 5px;
-}
-
-.button1:hover{
-  border: 1px solid #70322c;
-}
-.button2:hover{
-  border: 1px solid #ffdfdb;
-}
-.button1{
-  background-color: #f7bbb3;
-}
-.button2{
-  background-color: #562622;
-  color: #f6d5d2;
 }
 .p_none{
   display: none;
@@ -181,34 +184,24 @@ ul li div{
 .theme-container {
   width: 70px;
   height: 70px;
-  border-radius: 50%;
+  border-radius: 20px;
   position: fixed;
   top: 20px;
   right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.5s;
+  background-color: #eff8fff3;
+  /* background: linear-gradient(145deg, #395a75, #d9e8fba2); */
+  cursor: pointer;
 }
 .theme-container:hover {
-  opacity: 0.8;
-}
-.shadow-dark {
-  background: linear-gradient(145deg, #23282c, #1e2125);
-  box-shadow: 17px 17px 23px #1a1d20,
-    -17px -17px 23px #282d32, inset 5px 5px 4px #1e2226,
-    inset -5px -5px 4px #24282c;
-}
-.shadow-light {
-  box-shadow: 7px 7px 15px -10px #bbcfda, -4px -4px 13px #ffffff,
-    inset 7px 7px 3px rgba(209, 217, 230, 0.35),
-    inset -11px -11px 3px rgba(255, 255, 255, 0.3)
+  background: linear-gradient(145deg, #6a859c, #ffffffa2);
 }
 @keyframes change {
   0% {
     transform: scale(1);
   }
-
   100% {
     transform: scale(1.4);
   }
@@ -219,7 +212,6 @@ ul li div{
   animation-direction: alternate;
 }
 .adding_btn{
-    width: 465px;
     height: 45px;
     color: #fff;
     border-radius: 5px;
@@ -230,18 +222,32 @@ ul li div{
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
-    position: relative;
     display: inline-block;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
      7px 7px 20px 0px rgba(0,0,0,.1),
      4px 4px 5px 0px rgba(0,0,0,.1);
     outline: none;
-
-    background: rgb(5, 105, 80);
-    background: linear-gradient(0deg, rgb(6, 131, 110) 0%, rgb(12, 180, 141) 100%);
+    background: #145DA0 ;
     border: none;
   }
   .adding_btn:hover{
-    background: rgb(0, 255, 94);
-    background: linear-gradient(0deg, rgb(80, 255, 211) 0%, rgb(7, 149, 116) 100%);
+    background: linear-gradient(0deg, #001e5f 0% , #145DA0 80%);
+  }
+  @media only screen and (min-width: 540px ) {
+    .adding_btn , .input{
+     width: 465px;
+    }
+    
+   
+  }
+  @media only screen and (max-width:540px) {
+    .quotediv{
+      position: relative;
+      margin: 0;
+      border:1px solid #000000;
+      max-width: 300px;
+    }
+    .firstdiv{
+      margin-top: 100px;
+    }
   }

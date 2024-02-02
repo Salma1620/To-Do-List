@@ -1,8 +1,5 @@
 
 export default function darkmode(input){
-
-
-
 document.body.style="background-color: var(--bs-dark);transition: 0.5s;"
 const sun = "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg";
 const moon = "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg"
@@ -44,7 +41,7 @@ const moon = "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b
   function setDark() {
     if(input){
       input.style.setProperty("background-color","#222222")
-      input.style.setProperty("color","#FFFF")
+      input.style.setProperty("color","#F9F6EE")
     }
     root.style.setProperty("--bs-dark", "#212529");
     container.classList.remove("shadow-light");
