@@ -1,6 +1,8 @@
 # Projet To-Do List
 ### This project is a simple to-do list application, built using React and styled with CSS .
 
+![project screen](https://github.com/Salma1620/To-Do-List/issues/1#issue-2252751513)
+
 ## Table of Contents
 
 - [Installation](#installation)
