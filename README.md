@@ -1,8 +1,13 @@
 # Projet To-Do List
 ### This project is a simple to-do list application, built using React and styled with CSS .
-
-![project screen](https://github.com/Salma1620/To-Do-List/issues/1#issue-2252751513)
-
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/Salma1620/To-Do-List/issues/1#issue-2252751513" alt="Project Screen" width="1200"/>
+    </td>    
+  </tr>
+</table>
+  
 ## Table of Contents
 
 - [Installation](#installation)
